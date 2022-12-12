@@ -11,19 +11,16 @@ export class CoursService{
   constructor(private http: HttpClient) {
   }
   deleteCours(c: Cours): Observable<void>{
-    return this.http.delete<void>(this.host + '/cours/' +
-      c.idcours);
+    return this.http.delete<void>(this.host + "/cours/" + c.idcours);
   }
   save(c: Cours,s: Salle): Observable<Cours>{
     c.salle=s;
-    return this.http.post<Cours>(this.host + '/cours/',c);
+    return this.http.post<Cours>(this.host + "/cours/",c);
   }
   updateCours(c: Cours): Observable<Cours>{
-    return this.http.put<Cours>(this.host + '/cours/' +
-      c.idcours, c);
+    return this.http.put<Cours>(this.host + "/cours/" + c.idcours, c);
   }
   getCoursSalle(idSalle: number) : Observable<Cours[]>{
-    return this.http.get<Cours[]>(this.host + '/cours/idsalle=' +
-      idSalle);
+    return this.http.get<Cours[]>(this.host + "/cours/idsalle=" + idSalle);
   }
 }

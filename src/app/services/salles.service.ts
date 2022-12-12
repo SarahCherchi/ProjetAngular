@@ -9,19 +9,19 @@ export class SallesService{
   constructor(private http: HttpClient) {
   }
   getSalle(idsalle: number): Observable<Salle>{
-    return this.http.get<Salle>(this.host + '/salles/' + idsalle);
+    return this.http.get<Salle>(this.host + "/salles/" + idsalle);
   }
 
-  searchSalleUnique(sigle: string): Observable<Salle>{
-    return this.http.get<Salle>(this.host + '/salles/sigle=' + sigle);
+  getSalleSigle(sigle: string): Observable<Salle>{
+    return this.http.get<Salle>(this.host + "/salles/sigle=" + sigle);
   }
   deleteSalle(s: Salle): Observable<void>{
-    return this.http.delete<void>(this.host + '/salles/' + s.idsalle);
+    return this.http.delete<void>(this.host + "/salles/" + s.idsalle);
   }
   save(s: Salle): Observable<Salle>{
-    return this.http.post<Salle>(this.host + '/salles/', s);
+    return this.http.post<Salle>(this.host + "/salles/", s);
   }
   updateClient(s: Salle): Observable<Salle>{
-    return this.http.put<Salle>(this.host + '/salles/' + s.idsalle, s);
+    return this.http.put<Salle>(this.host + "/salles/" + s.idsalle, s);
   }
 }
