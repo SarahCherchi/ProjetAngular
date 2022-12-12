@@ -11,7 +11,7 @@ import {Salle} from '../../entities/salle.entities';
 })
 export class SallesComponent implements OnInit {
 
-  salles?: Salle; //le ? signifie que la valeur undefinied est acceptée
+  salles?: Salle[]; //le ? signifie que la valeur undefinied est acceptée
   constructor(private sallesService: SallesService, private router:
     Router) { }
   ngOnInit(): void { }

@@ -12,8 +12,8 @@ export class SallesService{
     return this.http.get<Salle>(this.host + "/salles/" + idsalle);
   }
 
-  getSalleSigle(sigle: string): Observable<Salle>{
-    return this.http.get<Salle>(this.host + "/salles/sigle=" + sigle);
+  getSalleSigle(sigle: string): Observable<Salle[]>{
+    return this.http.get<Salle[]>(this.host + "/salles/sigle=" + sigle);
   }
   deleteSalle(s: Salle): Observable<void>{
     return this.http.delete<void>(this.host + "/salles/" + s.idsalle);
