@@ -7,6 +7,8 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { SallesComponent } from './components/salles/salles.component';
 import { CoursComponent } from './components/cours/cours.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CoursComponent } from './components/cours/cours.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
