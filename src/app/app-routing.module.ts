@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'salles', component: SallesComponent},
   {path: 'cours', component: CoursComponent},
   {path: '', component: HomeComponent},
-  {path:"newClient",component:NewsalleComponent}
+  {path:"newSalle",component:NewsalleComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

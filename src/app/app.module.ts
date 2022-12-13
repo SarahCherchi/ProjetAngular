@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SallesComponent } from './components/salles/salles.component';
 import { CoursComponent } from './components/cours/cours.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NewsalleComponent } from './components/newsalle/newsalle.component';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { NewsalleComponent } from './components/newsalle/newsalle.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
