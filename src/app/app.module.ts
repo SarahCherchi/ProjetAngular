@@ -9,6 +9,7 @@ import { SallesComponent } from './components/salles/salles.component';
 import { CoursComponent } from './components/cours/cours.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { NewsalleComponent } from './components/newsalle/newsalle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule} from "@angular/forms";
     MainMenuComponent,
     HomeComponent,
     SallesComponent,
-    CoursComponent
+    CoursComponent,
+    NewsalleComponent
   ],
   imports: [
     BrowserModule,

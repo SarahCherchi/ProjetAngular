@@ -21,7 +21,9 @@ export class SallesComponent implements OnInit {
         next: data => {this.salles = data}
       });
   }
-  onNewSalle() { } //développé plus tard
+  onNewSalle() {
+    this.router.navigateByUrl("newSalle")
+  }
   onDelete(s: Salle) {
     let v = confirm('êtes vous sûr de vouloir supprimer ? ');
     if (v) {
