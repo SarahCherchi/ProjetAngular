@@ -10,6 +10,7 @@ import { CoursComponent } from './components/cours/cours.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NewsalleComponent } from './components/newsalle/newsalle.component';
+import { EditsalleComponent } from './components/editsalle/editsalle.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NewsalleComponent } from './components/newsalle/newsalle.component';
     HomeComponent,
     SallesComponent,
     CoursComponent,
-    NewsalleComponent
+    NewsalleComponent,
+    EditsalleComponent
   ],
   imports: [
     BrowserModule,

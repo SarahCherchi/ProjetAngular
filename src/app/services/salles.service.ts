@@ -21,7 +21,7 @@ export class SallesService{
   save(s: Salle): Observable<Salle>{
     return this.http.post<Salle>(this.host + "/salles/", s);
   }
-  updateClient(s: Salle): Observable<Salle>{
+  updateSalle(s: Salle): Observable<Salle>{
     return this.http.put<Salle>(this.host + "/salles/" + s.idsalle, s);
   }
 }

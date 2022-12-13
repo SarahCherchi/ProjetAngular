@@ -45,6 +45,8 @@ export class SallesComponent implements OnInit {
       );
     }
   }
-  onEdit(s: Salle) { }//développé plus tard
+  onEdit(s: Salle) {
+    this.router.navigateByUrl("editsalle/"+s.idsalle);
+  }
 
 }
