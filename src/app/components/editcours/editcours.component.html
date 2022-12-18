@@ -1,0 +1,45 @@
+<div class="container" *ngIf="deleted == false">
+  <form [formGroup]="coursFormGroup" *ngIf="coursFormGroup">
+    <div class = "form-group">
+      <label>ID DU COURS</label>
+      <input type ="text" class="form-control"
+             formControlName="idcours" readonly>
+    </div>
+    <div class = "form-group">
+      <label>CODE DU COURS</label>
+      <input type ="text" class="form-control"
+             formControlName="code"
+             [ngClass]="{'is-invalid': submitted && coursFormGroup.controls.code.errors}">
+      <div *ngIf="submitted && coursFormGroup.controls.code.errors" class ="invalid-feedback">
+        <div *ngIf="coursFormGroup.controls.code.errors.required">
+          code du cours obligatoire
+        </div>
+      </div>
+    </div>
+    <div class = "form-group">
+      <label>INTITULE</label>
+      <input type ="text" class="form-control"
+             formControlName="intitule"
+             [ngClass]="{'is-invalid': submitted && coursFormGroup.controls.intitule.errors}">
+      <div *ngIf="submitted && coursFormGroup.controls.intitule.errors" class ="invalid-feedback">
+        <div *ngIf="coursFormGroup.controls.intitule.errors.required">
+          Intitulé obligatoire
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <ul class="navbar navbar-nav">
+        <li class="nav-item">
+          <button (click)="onUpdateCours()" class="btn btn-success">
+            Save
+          </button>
+        </li>
+        <li class="nav-item">
+          <button (click)="onDeleteCours()" class="btn btn-success">
+            Delete
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </form>
+</div>

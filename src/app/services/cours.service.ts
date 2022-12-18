@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {HttpClient} from "@angular/common/http";
 import {Observable} from 'rxjs';
 import {Cours} from '../entities/cours.entities';
 import {Salle} from '../entities/salle.entities';
-import {formatDate} from '@angular/common';
+
 @Injectable({providedIn:"root"})
 export class CoursService{
   private host = environment.host;
@@ -23,4 +23,8 @@ export class CoursService{
   getCoursSalle(idSalle: number) : Observable<Cours[]>{
     return this.http.get<Cours[]>(this.host + "/cours/idsalle=" + idSalle);
   }
+  search(id:number):Observable<Cours>{
+    return this.http.get<Cours>(this.host+"/cours/"+id);
+  }
+
 }

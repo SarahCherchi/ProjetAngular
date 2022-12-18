@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NewsalleComponent } from './components/newsalle/newsalle.component';
 import { EditsalleComponent } from './components/editsalle/editsalle.component';
 import { NewcoursComponent } from './components/newcours/newcours.component';
+import { EditcoursComponent } from './components/editcours/editcours.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NewcoursComponent } from './components/newcours/newcours.component';
     CoursComponent,
     NewsalleComponent,
     EditsalleComponent,
-    NewcoursComponent
+    NewcoursComponent,
+    EditcoursComponent
   ],
   imports: [
     BrowserModule,

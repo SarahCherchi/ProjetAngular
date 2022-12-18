@@ -1,1 +1,10 @@
-<p>cours works!</p>
+<form (ngSubmit)="onSearch()" class="form-inline">
+  <label>NUMERO DU COURS</label>
+  <input [(ngModel)]="idcours" name="idcours" type="text" >
+  <button class="btn btn-sm btn-outline-info m-lg-2">
+    <span class = "fa fa-search"> </span>
+  </button>
+</form>
+<ng-container *ngIf="cours">
+  <app-editcours [cours] ="cours"></app-editcours>
+</ng-container>
