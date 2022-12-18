@@ -27,5 +27,30 @@
     <button (click)="onUpdateSalle()" class="btn btn-success">
       Save
     </button>
+    <button (click)="onShowCouSalle()" class="btn btn-success">
+      Cours
+    </button>
   </form>
 </div>
+<ng-container *ngIf="cours" >
+  <ng-container *ngIf="cours.length>0 else vide">
+    <table class="table">
+      <thead>
+      <th>Idcours</th>
+      <th>Code</th>
+      <th>Intitule</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cou of cours">
+        <td>{{cou.idcours}}</td>
+        <td>{{cou.code}}</td>
+        <td>{{cou.intitule}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #vide>
+    Aucun cours pour cette salle
+  </ng-template>
+</ng-container>
+
