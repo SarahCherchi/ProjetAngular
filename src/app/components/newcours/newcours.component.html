@@ -1,0 +1,23 @@
+<div class="container">
+  <form [formGroup]="coursFormGroup" *ngIf="coursFormGroup">
+    <table class="table">
+      <thead>
+      <th>Idcours</th>
+      <th>Code</th>
+      <th>Intitule</th>
+      </thead>
+      <tbody>
+      <td *ngIf="cr ;else vide">{{cr.idcours}} </td>
+      <ng-template #vide><td></td></ng-template>
+
+      <td> <input type ="text" class="form-control"
+                  formControlName="code"></td>
+      <td> <input type ="text" class="form-control"
+                  formControlName="intitule"></td>
+      </tbody>
+    </table>
+    <button (click)="onSaveCours()" class="btn btn-success">
+      Save
+    </button>
+  </form>
+</div>

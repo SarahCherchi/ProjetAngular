@@ -11,6 +11,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NewsalleComponent } from './components/newsalle/newsalle.component';
 import { EditsalleComponent } from './components/editsalle/editsalle.component';
+import { NewcoursComponent } from './components/newcours/newcours.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditsalleComponent } from './components/editsalle/editsalle.component';
     SallesComponent,
     CoursComponent,
     NewsalleComponent,
-    EditsalleComponent
+    EditsalleComponent,
+    NewcoursComponent
   ],
   imports: [
     BrowserModule,

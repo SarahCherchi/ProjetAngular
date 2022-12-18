@@ -45,5 +45,8 @@ export class EditsalleComponent implements OnInit {
     })
   }
 
+  addCours($event: Cours) {
+    this.cours?.push($event);
+  }
 }
 
