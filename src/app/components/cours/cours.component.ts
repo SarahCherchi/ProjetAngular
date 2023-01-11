@@ -22,8 +22,7 @@ export class CoursComponent implements OnInit {
         next :data => this.cours=data,
         error:err => alert("cours introuvable")
       }
-
-    )
+      )
   }
 
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {SallesService} from '../../services/salles.service';
-import {Observable} from 'rxjs';
 import {Salle} from '../../entities/salle.entities';
 
 @Component({
@@ -12,6 +11,7 @@ import {Salle} from '../../entities/salle.entities';
 export class SallesComponent implements OnInit {
 
   salles?: Salle[]; //le ? signifie que la valeur undefinied est acceptée
+  sallesCap?: Salle[];
   constructor(private sallesService: SallesService, private router:
     Router) { }
   ngOnInit(): void { }
@@ -47,6 +47,13 @@ export class SallesComponent implements OnInit {
   }
   onEdit(s: Salle) {
     this.router.navigateByUrl("editsalle/"+s.idsalle);
+  }
+
+  onSearchCap(value: any){
+    this.sallesService.getSalleCapacite(value.capacite).subscribe({
+      next: data => this.sallesCap = data,
+      error: error => alert(error)
+    })
   }
 
 }

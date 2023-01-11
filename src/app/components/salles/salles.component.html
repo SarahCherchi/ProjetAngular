@@ -47,3 +47,43 @@
     Sigle inconnu
   </ng-template>
 </ng-container>
+
+
+
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar navbar-nav">
+    <li>
+      <h6>Capacité de la salle :</h6>
+      <form #f2="ngForm" (ngSubmit)="onSearchCap(f2.value)" class="form-inline">
+        <input ngModel name="capacite" type="number" >
+        <button class="btn btn-sm btn-outline-info m-lg-2">
+<span class = "fa fa-search">
+</span>
+        </button>
+      </form>
+    </li>
+  </ul>
+</nav>
+<ng-container *ngIf="sallesCap">
+  <ng-container *ngIf="sallesCap.length>0 else inconnu">
+    <table class="table">
+      <thead>
+      <th>IdSalle</th>
+      <th>Sigle</th>
+      <th>Capacite</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of sallesCap">
+        <td>{{s.idsalle}}</td>
+        <td>{{s.sigle}}</td>
+        <td>{{s.capacite}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #inconnu>
+    Pas de salle de cette capacite
+  </ng-template>
+</ng-container>
+
+

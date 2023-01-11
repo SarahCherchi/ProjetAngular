@@ -13,6 +13,7 @@ import { NewsalleComponent } from './components/newsalle/newsalle.component';
 import { EditsalleComponent } from './components/editsalle/editsalle.component';
 import { NewcoursComponent } from './components/newcours/newcours.component';
 import { EditcoursComponent } from './components/editcours/editcours.component';
+import { ExamenComponent } from './components/examen/examen.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditcoursComponent } from './components/editcours/editcours.component';
     NewsalleComponent,
     EditsalleComponent,
     NewcoursComponent,
-    EditcoursComponent
+    EditcoursComponent,
+    ExamenComponent
   ],
   imports: [
     BrowserModule,

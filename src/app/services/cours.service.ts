@@ -7,7 +7,7 @@ import {Salle} from '../entities/salle.entities';
 
 @Injectable({providedIn:"root"})
 export class CoursService{
-  private host = environment.host;
+  host = environment.host;
   constructor(private http: HttpClient) {
   }
   deleteCours(c: Cours): Observable<void>{

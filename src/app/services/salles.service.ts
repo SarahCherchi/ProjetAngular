@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {Salle} from '../entities/salle.entities';
+import {Cours} from "../entities/cours.entities";
 @Injectable({providedIn:"root"}) //providedIn:"root" permet de rendre accessible cette classe partout dans l'application
 export class SallesService{
   private host = environment.host;
@@ -23,5 +24,11 @@ export class SallesService{
   }
   updateSalle(s: Salle): Observable<Salle>{
     return this.http.put<Salle>(this.host + "/salles/" + s.idsalle, s);
+  }
+  getSalleCapacite(capacite: number): Observable<Salle[]>{
+    return this.http.get<Salle[]>(this.host + "/salles/capacite=" + capacite);
+  }
+  getSalleIntitu(intitule: string) : Observable<Cours[]>{
+    return this.http.get<Cours[]>(this.host + "/salles/intitule=" + intitule);
   }
 }

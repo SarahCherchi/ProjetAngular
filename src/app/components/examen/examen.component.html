@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar navbar-nav">
+    <li>
+      <form #f="ngForm" (ngSubmit)="onSearchIntitu(f.value)" class="form-inline">
+        <input ngModel name="intitule" type="text" >
+        <button class="btn btn-sm btn-outline-info m-lg-2">
+<span class = "fa fa-search">
+</span>
+        </button>
+      </form>
+    </li>
+  </ul>
+</nav>
+
+<ng-container *ngIf="salles">
+  <ng-container *ngIf="salles.length>0 else inconnu">
+    <table class="table">
+      <thead>
+      <th>IdSalle</th>
+      <th>Sigle</th>
+      <th>Capacite</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of salles">
+        <td>{{s.idsalle}}</td>
+        <td>{{s.sigle}}</td>
+        <td>{{s.capacite}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #inconnu>
+    Pas de salle de trouvée
+  </ng-template>
+</ng-container>
+
