@@ -18,13 +18,13 @@ export class ExamenComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  /*onSearchIntitu(value: any){
-    this.coursService.getSalleIntitu(value.intitule).subscribe(
+  onSearchIntitu(value: any){
+    /*this.coursService.getSalleIntitu(value.intitule).subscribe(
       {
         next :data => this.cours=data,
         error:err => alert("cours introuvable")
       }
-    )
-  }*/
+    )*/
+  }
 
 }
